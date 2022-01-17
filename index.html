@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/index.css">
+  <title>Sidebar</title>
+</head>
+<body>
+  <aside>
+    <header>
+      <img src="./icons/Menu.svg" alt="menu" id="menu">
+      <div class="logo">
+        <img src="https://raw.githubusercontent.com/no-te-rindas/logo/main/Logo/LeonidasEsteban-destello-envolvente-cuadrada.png" alt="logo">
+        <p>No te rindas</p>
+      </div>
+    </header>
+    <div class="contenedor">
+      <ul>
+        <li>
+          <img src="./icons/archive.svg" alt="Recibidos">
+          <p class="">Recibidos</p>
+        </li>
+        <li>
+          <img src="./icons/star.svg" alt="Destacados">
+          <p class="">Destacados</p>
+        </li>
+        <li>
+          <img src="./icons/clock.svg" alt="Pospuestos">
+          <p class="">Pospuestos</p>
+        </li>
+        <li>
+          <img src="./icons/send.svg" alt="Enviados">
+          <p class="">Enviados</p>
+        </li>
+      </ul>
+    </div>
+    <div class="contenedor">
+      <p class="">CATEGORÍAS</p>
+      <ul>
+        <li>
+          <img src="./icons/mail.svg" alt="Todos">
+          <p class="">Todos</p>
+        </li>
+        <li>
+          <img src="./icons/trash-2.svg" alt="Papelera">
+          <p class="">Papelera</p>
+        </li>
+      </ul>
+    </div>
+  </aside>
+
+  <script>
+    const menu  = document.querySelector("#menu");
+    const texts = document.querySelectorAll('p');
+    const logo = document.querySelector('.logo');
+    const aside = document.querySelector('aside');
+    menu.addEventListener('click',()=> {
+      Array.from(texts).map(p=>{
+        p.classList.toggle('none');
+      });
+      logo.classList.toggle('none');
+      aside.classList.toggle('auto');
+    })
+  </script>
+</body>
+</html>

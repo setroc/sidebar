@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+:root {
+  --black: #000000; 
+  --primary: #0f56b3; 
+  --grey-bg: #fbfbfb; 
+  --grey: #787878; 
+  --white: #ffffff; 
+  --light-blue: #e1edfb;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 62.5%;
+}
+body {
+  color: var(--black);
+  background-color: var(--primary);
+  min-width: 375px;
+  width: 100%;
+  height: 100vh;
+}
+aside {
+  display: inline-block;
+  height: 100%;
+  background-color: var(--grey-bg);
+  width: 270px;
+}
+header {
+  display: flex;
+  align-items: center;
+  margin: 1rem;
+  gap: 1rem;
+}
+header > img {
+  cursor: pointer;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.logo img {
+  width: 30px;
+}
+.logo p {
+  color: var(--black);
+  font-weight: bold;
+}
+
+.contenedor ul {
+  /* margin: 1rem; */
+  display: flex;
+  flex-direction: column;
+}
+.contenedor ul li {
+  display: flex;
+  width: calc(100% - 10px);
+  gap: 1rem;
+  align-items: center;
+  padding: 1rem;
+  padding-left: 1rem;
+  cursor: pointer;
+}
+.contenedor ul li:hover {
+  background-color: var(--light-blue);
+  border-radius: 0 10px 10px 0;
+}
+.contenedor ul li:hover p {
+  color: var(--primary);
+}
+.contenedor ul li img,
+.contenedor ul li p {
+  color: var(--grey);
+  font-weight: bold;
+}
+.contenedor > p {
+  color: var(--black);
+  font-weight: bold;
+  margin: 1rem;
+  font-size: .8rem;
+  letter-spacing: 2px;
+}
+
+
+.none {
+  display: none;
+}
+.logo.none {
+  display: none;
+}
+aside.auto {
+  width: auto;
+}
